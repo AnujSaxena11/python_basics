@@ -1,0 +1,19 @@
+#check if the given string is palindrome or not
+
+n=input('enter')
+l=len(n)
+a=0
+b=-1
+z=0
+while l:
+    if n[a]==n[b]:
+        a+=1
+        b-=1
+        z=1
+    else:
+        z=0
+    l-=1
+if z==1:
+    print('aaa')
+else:
+    print('bbb')
