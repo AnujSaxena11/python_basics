@@ -1,0 +1,8 @@
+#multiplication table
+
+n=int(input('enter number:'))
+a=1
+while a<=10:
+    m=a*n
+    print(f'{n} x {a} = {m}')
+    a+=1
