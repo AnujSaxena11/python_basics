@@ -1,0 +1,11 @@
+#sum of all digits
+
+a=input('enter number:')
+l=len(a)
+s=0
+c=0
+while l:
+    s+=int(a[c])
+    l-=1
+    c+=1
+print('sum of all digits is:',s)
