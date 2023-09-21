@@ -1,0 +1,25 @@
+#random number guess
+
+import random
+n=1
+b=random.randrange(1,101)
+score=10
+lev=input('choose difficulty(easy/medium/hard)')
+if lev=='easy':
+    i=10
+elif lev=='medium':
+    i=5
+else:
+    i=3
+print(f'you have {i} chances')
+while n==1 and i!=0:
+    a=int(input('enter the number:'))
+    if a==b:
+        print('win with score:',score)
+        n=0
+    elif a<b:
+        print('try guessing a bigger number')
+    else:
+        print('try guessing a smaller number')
+    score-=1
+    i-=1
