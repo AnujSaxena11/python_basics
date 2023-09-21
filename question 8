@@ -14,6 +14,6 @@ while l:
         z=0
     l-=1
 if z==1:
-    print('aaa')
+    print(n,'is a palindrome')
 else:
-    print('bbb')
+    print(n,'is not a palindrome')
