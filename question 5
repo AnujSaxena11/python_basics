@@ -1,0 +1,11 @@
+#password validation
+
+a=123456
+n=1
+while n==1:
+    b=int(input('enter password'))
+    if a==b:
+        print('correct')
+        n=0
+    else:
+        print('try again')
