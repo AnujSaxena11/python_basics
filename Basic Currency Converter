@@ -1,0 +1,53 @@
+#Basic Currency Converter using OOP and GUI
+import tkinter as tk
+from tkinter import messagebox as mb
+root=tk.Tk()
+
+class converter:
+    def __init__(self,win,d):
+        self.win=win
+        self.d=d
+        lb1=tk.Label(root, text='Enter amount')
+        lb1.grid(row=0, column=0, padx=5, pady=10)
+
+        win.title('Currency Converter')
+
+        self.entry1=tk.Entry(win)
+        self.entry1.grid(row=0, column=2, padx=5, pady=10)
+
+        lb2=tk.Label(win, text='Convert from(currency code)')
+        lb2.grid(row=1, column=0, padx=5, pady=10)
+
+        self.entry2=tk.Entry(win)
+        self.entry2.grid(row=1, column=2, padx=5, pady=10)
+
+        lb3=tk.Label(win, text='Convert to(currency code)')
+        lb3.grid(row=2, column=0, padx=5, pady=10)
+
+        self.entry3=tk.Entry(win)
+        self.entry3.grid(row=2, column=2, padx=5, pady=10)
+
+        bt=tk.Button(win, text='Convert', command=self.action)
+        bt.grid(row=3,column=1, padx=5, pady=10)
+
+    def action(self):
+        l=[]
+        amt=float(self.entry1.get())
+        currency_1=self.entry2.get()
+        currency_2=self.entry3.get()
+        for i in d:
+            if i==currency_1:
+                l.append(i)
+        for j in d:
+            if j==currency_2:
+                l.append(j)
+            
+        a=1/self.d[l[0]]   #every courency gets converted into USD and stored in a
+        b=self.d[l[1]]
+        c=a*b*amt
+        mb.showinfo('Converted amount',c)
+            
+
+d={'USD':1,'INR':82.99,'EUR':0.9275,'JPY':149.97,'CNY':7.19,'RUB':92}
+obj=converter(root,d)
+root.mainloop()
