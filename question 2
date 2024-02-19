@@ -1,8 +1,0 @@
-# factorial
-
-n=int(input('enter number'))
-a=1
-while n:
-    a*=n
-    n-=1
-print(a)
