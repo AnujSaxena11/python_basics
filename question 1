@@ -1,8 +1,0 @@
-#countdown timer and use of time library
-
-import time
-n=int(input('enter number'))
-while n:
-    print(n)
-    n-=1
-    time.sleep(0.5)
